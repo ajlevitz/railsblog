@@ -1,6 +1,6 @@
 Blog::Application.routes.draw do
 
-  resources :posts
+  resources :posts # Sets all the routes for the standard RESTful actions for posts_controller
 
   get "welcome/index"
   root 'welcome#index'
