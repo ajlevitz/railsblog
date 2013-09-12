@@ -1,6 +1,8 @@
 Blog::Application.routes.draw do
 
-  resources :posts # Sets all the routes for the standard RESTful actions for posts_controller
+  resources :posts do # Sets all the routes for the standard RESTful actions for posts_controller
+    resources :comments # Creates comments as a nested resource
+  end
 
   get "welcome/index"
   root 'welcome#index'
